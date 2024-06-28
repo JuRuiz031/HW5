@@ -44,10 +44,12 @@ tilePieces.pieces.forEach(piece => {
     }
 });
 
+// Get the image for each corresponding tile
 function getTile(letter) {
     return `tiles/Scrabble_Tile_${letter}.jpg`;
 }
 
+// Function to randomize any given amount of tiles
 function randomizeTiles(count) {
     const tiles = [];
     for (let i = 0; i < count; i++) {
