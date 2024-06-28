@@ -43,13 +43,15 @@ tilePieces.pieces.forEach(piece => {
         tileArray.push({ letter: piece.letter, value: piece.value });
     }
 });
+
 function getTile(letter) {
     return `tiles/Scrabble_Tile_${letter}.jpg`;
 }
+
 function randomizeTiles(count) {
     const tiles = [];
     for (let i = 0; i < count; i++) {
-        const tile = tileArray[Math.floor(Math.random() * tileDistribution.length)];
+        const tile = tileArray[Math.floor(Math.random() * tileArray.length)];
         tiles.push(tile);
     }
     return tiles;
