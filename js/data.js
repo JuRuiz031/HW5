@@ -4,7 +4,7 @@ juan_ruiz@student.uml.edu
 GUI1 HW5
 */
 // Make JSON data usable by converting it into an array for each scrabble tile
-const tileData = {
+const tilePieces = {
     "pieces": [
         {"letter":"A", "value":1, "amount":9},
         {"letter":"B", "value":3, "amount":2},
@@ -37,19 +37,19 @@ const tileData = {
 };
 
 // Turn tileData into an array
-const tileDistribution = []; // Empty array to be filled, then loop to populate the array
-tileData.pieces.forEach(piece => {
+const tileArray = []; // Empty array to be filled, then loop to populate the array
+tilePieces.pieces.forEach(piece => {
     for (let i = 0; i < piece.amount; i++) {
-        tileDistribution.push({ letter: piece.letter, value: piece.value });
+        tileArray.push({ letter: piece.letter, value: piece.value });
     }
 });
 function getTile(letter) {
-    return `tiles/tile_${letter}.jpg`;
+    return `tiles/Scrabble_Tile_${letter}.jpg`;
 }
 function randomizeTiles(count) {
     const tiles = [];
     for (let i = 0; i < count; i++) {
-        const tile = tileDistribution[Math.floor(Math.random() * tileDistribution.length)];
+        const tile = tileArray[Math.floor(Math.random() * tileDistribution.length)];
         tiles.push(tile);
     }
     return tiles;

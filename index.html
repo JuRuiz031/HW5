@@ -1,31 +1,38 @@
 <!-- Juan Fernando Ruiz
 juan_ruiz@student.uml.edu
-GUI Programming HW5  -->
+GUI1 HW5 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Scrabble Game Sean Diaz</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Single Line Scrabble-Juan F. Ruiz</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/data.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
-    <div id="scrabble-board-container">
-        <div id="scrabble-board">
-            <!-- scrabble board will go here probs-->
-        </div>
+    <h1>Welcome to Single Line Scrabble!</h1>
+  
+    <h2>How to Play</h2> <p>Test your vocabulary skills and build high-scoring words in this single-player version of Scrabble.</p>
+    
+    <h2>Instructions</h2>
+    <p> Drag and drop tiles from your rack onto the board to form words. The score for each word will be displayed.</p>
+    <p>You can refresh your tiles or reset the game at any time. Remember, this is a single-line version, so focus on building the longest word possible to maximize your score!</p>
+
+    <h3>Good luck and have fun!</h6>
+
+    <div id="board-container">
+        <div id="board"></div>
     </div>
-    <div id="tile-rack-container">
-        <div id="tile-rack">
-            <!-- Tile rack where the tiles should be placed -->
-        </div>
+    <div id="rack-container">
+        <div id="rack"></div>
     </div>
     <div id="score">Score: 0</div>
-    <button id="new-tiles">New Set of Tiles</button>
-    <button id="restart">Restart</button>
+    <button id="refresh-tiles">Refresh Tiles</button>
+    <button id="reset">Reset Game</button>
+    <h5>Made by Juan Fernando Ruiz, completed on 6/28/2024 for GUI1 Summer 1 online class offered by UMass Lowell</h4>
 </body>
 </html>
